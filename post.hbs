@@ -5,7 +5,7 @@
     <article class="{{post_class}}">
 
         {{#post}}
-
+        
         <header>
         {{#if tags}}<div class="post-meta tags">Posted in {{tags}}</div>{{/if}}
         <h1 class="post-title">{{{title}}}</h1>
@@ -16,7 +16,7 @@
             {{content}}
         </section>
 
-        <section class="share">
+<!--        <section class="share">
             <p class="info prompt">Share this post</p>
             <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -30,20 +30,24 @@
                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 <i class="fa fa-2x fa-fw fa-google-plus-square"></i> <span class="hidden">Google+</span>
             </a>
-        </section>
+        </section> -->
 
-        <footer class="post-footer">
+<!--        <footer class="post-footer"> -->
 
             {{#if author}}
-            <section class="author">
+<!--            <section class="author">
                 <div class="authorimage" style="background: url({{author.image}})"></div>
                 <p class="attr">Author</p>
                 <h4><a href="{{author.website}}">{{author.name}}</a></h4>
                 <p class="bio">{{author.bio}}</p>
-            </section>
+            </section> -->
+
+            {{#contentFor "authorName"}}
+                          By <a href="{{author.website}}" target="_blank">{{author.name}}</a>
+            {{/contentFor}}
             {{/if}}
 
-        </footer>
+<!--        </footer> -->
 
         {{/post}}
 
