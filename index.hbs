@@ -2,6 +2,8 @@
 
 <main class="content" role="main">
 
+
+
     {{#foreach posts}}
 
     <article class="preview">
@@ -15,14 +17,10 @@
         </section>
     </article>
 
-            {{#if author}}
 
-            {{#contentFor "authorName"}}
-                          By <a href="{{author.website}}" target="_blank">{{author.name}}</a>
-            {{/contentFor}}
-            {{/if}}
 
     {{/foreach}}
+
 
     {{pagination}}
 
