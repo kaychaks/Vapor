@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -17,30 +17,40 @@
     {{#if pagination.next}}<link href="{{pageUrl pagination.next}}" rel="prefetch" />{{/if}}
 
     {{ghost_head}}
-</head>
-<body class="{{body_class}}">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-13068364-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body class="{{body_class}}">
 
     <header id="site-head">
-        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
-        <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-        {{> header-description}}
-        {{!> menu}}
+      {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
+      <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      {{> header-description}}
+      {{!> menu}}
     </header>
 
     {{{body}}}
 
     <footer class="site-footer">
-        <div class="inner">
-            {{!> footer-description}}
-            <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a></section>
-<!--            <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section> -->
-            <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org/"><span class="hidden">Ghost</span></a></section>
-        </div>
+      <div class="inner">
+        {{!> footer-description}}
+        <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a></section>
+        <!--            <section>Vapor theme by <a href="http://sethlilly.com/">Seth Lilly</a></section> -->
+        <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org/"><span class="hidden">Ghost</span></a></section>
+      </div>
     </footer>
 
     {{ghost_foot}}
 
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
-</body>
+  </body>
 </html>
