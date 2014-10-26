@@ -15,9 +15,9 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bigfoot-default.css"}}" />
 
-
-    {{#if pagination.next}}<link href="{{pageUrl pagination.next}}" rel="prefetch" />{{/if}}
+    {{#if pagination.next}}<link href="{{page_url pagination.next}}" rel="prefetch" />{{/if}}
 
     {{ghost_head}}
     <script>
@@ -55,6 +55,7 @@
 
     {{ghost_foot}}
 
+    <script type="text/javascript" src="{{asset "js/bigfoot.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
   </body>

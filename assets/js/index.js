@@ -13,6 +13,8 @@
 
         //$("#blog-logo").prependTo("#site-head-content");
 
+        $.bigfoot();
+
     });
 
 }(jQuery));
