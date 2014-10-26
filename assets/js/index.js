@@ -1,8 +1,3 @@
-/**
- * Main JS file for Casper behaviours
- */
-
-/*globals jQuery, document */
 (function ($) {
     "use strict";
 
@@ -13,7 +8,9 @@
 
         //$("#blog-logo").prependTo("#site-head-content");
 
-        $.bigfoot();
+        $.bigfoot({
+	    actionOriginalFN : "ignore"
+	});
 
     });
 
