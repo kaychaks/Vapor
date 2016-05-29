@@ -15,8 +15,9 @@
                         <h1 class="post-title">{{{title}}}</h1>
                  {{/has}}	
 
-        <div class="post-meta">
-	     <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>
+        <!--<div class="post-meta">
+	     <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="dddd, MMMM DD, YYYY"}}</time></div>-->
+        <div class="post-meta"><time class="post-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">...</time></div>
         </header>
 
         <section class="post-content">
