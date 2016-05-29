@@ -7,6 +7,12 @@
         // for better relative/absolute positioning.
 
         //$("#blog-logo").prependTo("#site-head-content");
+	if ($(".post-title").hasClass("linkedlist")) {
+            var text = $(".post-title").html();
+            var re = /\[([^\[]+)\]\(([^\)]+)\)/;
+            var tx = text.replace(re,"<a href='$2' target='_blank'>$1</a>");
+            $(".post-title").html(tx);
+        }
 
         $.bigfoot({
 	    actionOriginalFN : "ignore"

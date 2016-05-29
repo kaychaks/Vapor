@@ -188,8 +188,8 @@ section.author p.bio {
 }
 blockquote {
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  //font-size: 1.6em;
-  //font-weight: 300;
+  font-size: 1.6em;
+  font-weight: 300;
   line-height: 1.2em;
   //font-style: italic;
   //text-transform: uppercase;
@@ -199,8 +199,8 @@ blockquote {
 }
 blockquote p {
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  //font-size: 1.6em;
-  //font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 300;
   line-height: 1.2em;
   //font-style: italic;
   //text-transform: uppercase;
@@ -513,4 +513,14 @@ table tfoot {
   .page-number {
     display: block;
   }
+}
+
+.linkedlist a{
+    color: #3498db !important;
+    text-decoration: underline;
+}
+
+.linkedlistpost a{
+    text-decoration: underline;
+    color: #3498db;
 }
